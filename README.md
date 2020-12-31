@@ -1,4 +1,4 @@
-# TypeScript Bootcamp
+# TypeScript Overview
 
 ## What is TypeScript
 
@@ -25,3 +25,38 @@
    ```cmd
    npm install -g typescript
    ```
+1. Compile ts file to js
+   ```cmd
+   tsc file.ts
+   ```
+
+# TypeScript Types
+
+## Core Types
+
+1. number
+   - Only one number type (js thing)
+1. string
+   - All text values
+1. boolean
+   - No truthy or falsy
+
+**Core primitives are always lowercase**
+
+## Object Types
+
+1. TypeScript creates a key/type pair when you define an object
+
+```ts
+const person = {
+	name: 'Gary',
+	age: 31,
+};
+```
+
+```ts
+const person: {
+	name: string;
+	age: number;
+};
+```
