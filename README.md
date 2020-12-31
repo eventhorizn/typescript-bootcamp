@@ -1,5 +1,11 @@
 # TypeScript Overview
 
+Note, this repo will have a number of .js files
+
+The rule is that since these are compiled files, they shouldn't be included
+
+But this isn't a 'project' per-say, and they are helpful for learning
+
 ## What is TypeScript
 
 1. A JavaScript Superset
@@ -32,6 +38,8 @@
 
 # TypeScript Types
 
+[Official Docs](https://www.typescriptlang.org/docs/handbook/basic-types.html)
+
 ## Core Types
 
 1. number
@@ -40,6 +48,9 @@
    - All text values
 1. boolean
    - No truthy or falsy
+1. object
+1. Array
+1. Tuple
 
 **Core primitives are always lowercase**
 
@@ -91,3 +102,51 @@ function isOlder(user: User, checkAge: number) {
 	return checkAge > user.age;
 }
 ```
+
+# TypeScript Compiler
+
+1. Using 'Watch' mode
+   - Hate recompiling your ts to js after every change?
+   ```cmd
+   tsc app.ts -w
+   ```
+   - Have to specifically target your file
+1. Compiling entire project
+   ```cmd
+   tsc --init
+   ```
+   - Creates a tsconfig.json
+   - Allows you to just type:
+     ```cmd
+     tsc
+     ```
+   - Compiles all ts files in your folder
+   - Can be combined w/ watch mode
+     ```cmd
+     tsc -w
+     ```
+1. Including & Excluding files
+   - Reference tsconfig.json
+   - Goes after compiler options
+   - "exclude": ["node_modules"]
+     - node_modules is excluded as a default option
+   - "include": []
+     - Anything NOT in included won't be compiled
+   - Compile include - exclude
+   - "files": []
+     - Like include, but can't set folders, just files
+1. Compilation Target
+   - Default is es5 (works in older browsers)
+   - But you can change it
+1. Core Libraries
+   - "lib": ["dom", "es6", "dom.iterable", "scripthost"]
+   - If not set, it uses defaults based on target (es6)
+     - Would be all the global defaults from es6
+1. Allow JS and Check JS
+   - Does typescript compilation and checking for vanilla js
+1. sourceMap
+   - Turning on allows you to debug ts files in browser
+1. outDir & rootDir
+   - **This is where you'd want to set src and dist**
+   - outDir for dist
+   - rootDir for src (compiler only looks there)
