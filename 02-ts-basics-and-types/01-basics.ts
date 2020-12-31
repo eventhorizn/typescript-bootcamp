@@ -12,7 +12,7 @@ function add(n1: number, n2: number, showResult: boolean, phrase: string) {
 // Assings type based on what the variable is set as
 const number1 = 5;
 const number2 = 2.8;
-const printResult = true;
+const printResult1 = true;
 const resultPhrase = 'Result is: ';
 
 // TypeScript does 'Type Inference'
@@ -23,4 +23,4 @@ numberGood = 5; // good practice
 
 // This actually produces a compile error!
 // It still produces your js file (but you can change that)
-add(number1, number2, printResult, resultPhrase);
+add(number1, number2, printResult1, resultPhrase);
