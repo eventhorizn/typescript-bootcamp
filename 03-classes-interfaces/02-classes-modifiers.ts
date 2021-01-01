@@ -1,4 +1,4 @@
-namespace PrivatePublic {
+namespace Modifiers {
 	class Department {
 		//private name: string;
 		// js doesn't use 'private'
