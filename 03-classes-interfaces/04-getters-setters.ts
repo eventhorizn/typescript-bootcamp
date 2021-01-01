@@ -1,20 +1,14 @@
-namespace Inheritance {
+namespace GetterSetter {
 	class Department {
-		//private name: string;
-		// js doesn't use 'private'
 		protected employees: string[] = [];
 
-		// shorthand initilalization
-		constructor(private readonly id: string, public name: string) {
-			//this.name = name;
-		}
+		constructor(private readonly id: string, public name: string) {}
 
 		describe(this: Department) {
 			console.log(`Department: (${this.id}) ${this.name}`);
 		}
 
 		addEmployee(employee: string) {
-			//this.id = 'd2'; readonly, can't do this
 			this.employees.push(employee);
 		}
 
@@ -24,19 +18,31 @@ namespace Inheritance {
 		}
 	}
 
-	// Can only inherit from one class
-	class ITDepartment extends Department {
-		admins: string[];
-
-		constructor(id: string, admins: string[]) {
-			super(id, 'IT');
-			this.admins = admins; // this has to come after super
-		}
-	}
-
 	class AccountingDepartment extends Department {
+		private lastReport: string;
+
+		get mostRecentReport() {
+			if (this.lastReport) {
+				return this.lastReport;
+			}
+			throw new Error('No report found.');
+		}
+
+		set mostRecentReport(value: string) {
+			if (!value) {
+				throw new Error('Please pass in a valid value');
+			}
+			this.addReport(value);
+		}
+
 		constructor(id: string, private reports: string[]) {
 			super(id, 'Accounting');
+
+			if (reports[0]) {
+				this.lastReport = reports[0];
+			} else {
+				this.lastReport = '';
+			}
 		}
 
 		addEmployee(name: string) {
@@ -48,6 +54,7 @@ namespace Inheritance {
 
 		addReport(text: string) {
 			this.reports.push(text);
+			this.lastReport = text;
 		}
 
 		getReports() {
@@ -55,19 +62,13 @@ namespace Inheritance {
 		}
 	}
 
-	const itDept = new ITDepartment('d2', ['Gary']);
-
-	itDept.addEmployee('Gary');
-	itDept.addEmployee('Rowe');
-
-	console.log(itDept);
-
 	const accounting = new AccountingDepartment('d1', []);
-
-	accounting.addReport('Something Went Wrong');
 	accounting.addEmployee('Gary');
 	accounting.addEmployee('Rowe');
 
-	accounting.describe();
-	accounting.printEmployeeInfo();
+	accounting.addReport('Something Went Wrong');
+	console.log(accounting.mostRecentReport);
+
+	accounting.mostRecentReport = 'New Report';
+	console.log(accounting.mostRecentReport);
 }
