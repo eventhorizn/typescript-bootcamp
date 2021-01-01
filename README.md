@@ -1,10 +1,9 @@
 # TypeScript Overview
 
-Note, this repo will have a number of .js files
-
-The rule is that since these are compiled files, they shouldn't be included
-
-But this isn't a 'project' per-say, and they are helpful for learning
+- Note, this repo will have a number of .js files
+- The rule is that since these are compiled files, they shouldn't be included
+- But this isn't a 'project' per-say, and they are helpful for learning
+- [Feature Parity List](https://kangax.github.io/compat-table/es6/)
 
 ## What is TypeScript
 
@@ -104,6 +103,10 @@ function isOlder(user: User, checkAge: number) {
 ```
 
 # TypeScript Compiler
+
+**Note:** If you run tsc 'file' it will ignore the config settings
+
+You must run just tsc
 
 1. Using 'Watch' mode
    - Hate recompiling your ts to js after every change?
