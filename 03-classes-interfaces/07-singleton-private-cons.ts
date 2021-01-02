@@ -1,4 +1,4 @@
-namespace AbstractClass {
+namespace Singleton {
 	// abstract classes can't be instantiated
 	abstract class Department {
 		protected employees: string[] = [];
