@@ -1,6 +1,7 @@
 namespace InterfacesWithClass {
 	interface Greetable {
-		name: string;
+		// can set read only on interface
+		readonly name: string;
 
 		greet(phrase: string): void;
 	}
