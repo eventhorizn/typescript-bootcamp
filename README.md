@@ -5,6 +5,13 @@
 - But this isn't a 'project' per-say, and they are helpful for learning
 - [Feature Parity List](https://kangax.github.io/compat-table/es6/)
 
+## Project Setup
+
+![](images/projectSetup.png)
+
+- Notice that ts files are your source and js are your compiled code
+- We don't want to store compiled code in sourece control
+
 ## What is TypeScript
 
 1. A JavaScript Superset
