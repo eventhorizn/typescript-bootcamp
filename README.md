@@ -1,16 +1,11 @@
 # TypeScript Overview
 
+[Official Docs](https://www.typescriptlang.org/docs/)
+
 - Note, this repo will have a number of .js files
 - The rule is that since these are compiled files, they shouldn't be included
 - But this isn't a 'project' per-say, and they are helpful for learning
 - [Feature Parity List](https://kangax.github.io/compat-table/es6/)
-
-## Project Setup
-
-![](images/projectSetup.png)
-
-- Notice that ts files are your source and js are your compiled code
-- We don't want to store compiled code in sourece control
 
 ## What is TypeScript
 
@@ -41,6 +36,13 @@
    ```cmd
    tsc file.ts
    ```
+
+## Project Setup
+
+![](images/projectSetup.png)
+
+- Notice that ts files are your source and js are your compiled code
+- We don't want to store compiled code in source control
 
 # TypeScript Types
 
