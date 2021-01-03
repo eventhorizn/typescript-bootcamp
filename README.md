@@ -163,6 +163,17 @@ You must run just tsc
    - outDir for dist
    - rootDir for src (compiler only looks there)
 
-# Type vs Interface
+# TypeScript Under the Covers
 
-I'm curious the when/why to use either
+## Classes & Interfaces
+
+1. [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+1. [Interfaces](https://www.typescriptlang.org/docs/handbook/interfaces.html)
+
+## Advanced Types
+
+1. [Advanced Types](https://www.typescriptlang.org/docs/handbook/advanced-types.html)
+
+## Generics
+
+1. [Generics](https://www.typescriptlang.org/docs/handbook/generics.html)
