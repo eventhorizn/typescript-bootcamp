@@ -168,12 +168,123 @@ You must run just tsc
 ## Classes & Interfaces
 
 1. [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+
+   ```ts
+   class Department {
+   	//private name: string;
+   	// js doesn't use 'private'
+   	protected employees: string[] = [];
+
+   	// shorthand initilalization
+   	constructor(private readonly id: string, public name: string) {
+   		//this.name = name;
+   	}
+
+   	describe(this: Department) {
+   		console.log(`Department: (${this.id}) ${this.name}`);
+   	}
+
+   	addEmployee(employee: string) {
+   		//this.id = 'd2'; readonly, can't do this
+   		this.employees.push(employee);
+   	}
+
+   	printEmployeeInfo() {
+   		console.log(this.employees.length);
+   		console.log(this.employees);
+   	}
+   }
+
+   // Can only inherit from one class
+   class ITDepartment extends Department {
+   	admins: string[];
+
+   	constructor(id: string, admins: string[]) {
+   		super(id, 'IT');
+   		this.admins = admins; // this has to come after super
+   	}
+   }
+   ```
+
 1. [Interfaces](https://www.typescriptlang.org/docs/handbook/interfaces.html)
+
+   ```ts
+   interface Named {
+   	readonly name: string;
+   }
+
+   // interfaces can extend other interfaces
+   // can extend multiple, comma separated
+   interface Greetable extends Named {
+   	// can set read only on interface
+   	readonly name: string;
+
+   	greet(phrase: string): void;
+   }
+
+   // can implement multiple interfaces
+   class Person implements Greetable {
+   	name: string;
+   	age = 31;
+
+   	constructor(n: string) {
+   		this.name = n;
+   	}
+
+   	greet(phrase: string): void {
+   		console.log(`${phrase} ${this.name}`);
+   	}
+   }
+   ```
 
 ## Advanced Types
 
 1. [Advanced Types](https://www.typescriptlang.org/docs/handbook/advanced-types.html)
 
+```ts
+type Admin = {
+	name: string;
+	privileges: string[];
+};
+
+type Employee = {
+	name: string;
+	startDate: Date;
+};
+
+// Combining the types
+// Similar to interface inheritance
+// We can do this exact same thing w/ interfaces
+type ElevatedEmployee = Admin & Employee;
+
+const el: ElevatedEmployee = {
+	name: 'Gary',
+	privileges: ['create-server'],
+	startDate: new Date(),
+};
+```
+
 ## Generics
 
 1. [Generics](https://www.typescriptlang.org/docs/handbook/generics.html)
+
+```ts
+class DataStorage<T extends string | number | boolean> {
+	private data: T[] = [];
+
+	addItem(item: T) {
+		this.data.push(item);
+	}
+
+	removeItem(item: T) {
+		if (this.data.indexOf(item) === -1) {
+			return;
+		}
+		this.data.splice(this.data.indexOf(item), 1);
+	}
+
+	getItems() {
+		return [...this.data];
+	}
+}
+```
