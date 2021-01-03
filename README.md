@@ -162,3 +162,7 @@ You must run just tsc
    - **This is where you'd want to set src and dist**
    - outDir for dist
    - rootDir for src (compiler only looks there)
+
+# Type vs Interface
+
+I'm curious the when/why to use either
