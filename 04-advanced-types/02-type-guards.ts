@@ -22,7 +22,7 @@ namespace TypeGuards {
 	type Universal = Combinable & Numeric;
 
 	function add(a: Combinable, b: Combinable) {
-		// This is called a 'type guard'
+		// 1. 'typeof' checking
 		if (typeof a === 'string' || typeof b === 'string') {
 			return a.toString() + b.toString();
 		}
@@ -32,6 +32,7 @@ namespace TypeGuards {
 
 	type UnknownEmployee = Employee | Admin;
 
+	// 2. 'in' type guard
 	function printEmployeeInformation(emp: UnknownEmployee) {
 		console.log(`Name: ${emp.name}`);
 
@@ -71,8 +72,7 @@ namespace TypeGuards {
 	function useVehicle(vehicle: Vehicle) {
 		vehicle.drive();
 
-		// now what about 'loadCargo'
-		// instanceof is great
+		// 3. 'instanceof' guard
 		if (vehicle instanceof Truck) {
 			vehicle.loadCargo(1000);
 		}
