@@ -291,10 +291,11 @@ class DataStorage<T extends string | number | boolean> {
 
 ## Decorators
 
-- 'Meta Programming'
-- Meant for code that will be used by other devs
-  - Makes it easier for those devs to use your code
-- They run when you define a class
+1. [Decorators](https://www.typescriptlang.org/docs/handbook/decorators.html)
+   - 'Meta Programming'
+   - Meant for code that will be used by other devs
+   - Makes it easier for those devs to use your code
+   - They run when you define a class
 
 ```ts
 // 0. Class Decorator
