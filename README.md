@@ -288,3 +288,9 @@ class DataStorage<T extends string | number | boolean> {
 	}
 }
 ```
+
+## Decorators
+
+- 'Meta Programming'
+- Meant for code that will be used by other devs
+  - Makes it easier for those devs to use your code
