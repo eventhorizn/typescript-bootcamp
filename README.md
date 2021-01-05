@@ -366,3 +366,14 @@ class Product {
 	}
 }
 ```
+
+# TypeScript Modular Code
+
+## Splitting Code into Multiple Files
+
+1. Namespaces & File Bundling
+   - Use 'namespace' code syntax to group code
+   - Per-file or bundled compilation is possible (less imports to manage)
+1. ES6 Imports/Exports
+   - ES6 Modules
+   - Per-file compilation, but single script import
