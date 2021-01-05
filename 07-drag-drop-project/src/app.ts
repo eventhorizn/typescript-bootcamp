@@ -1,1 +1,28 @@
-// Just copy individual files to this and compile if you want to debug
+// This class is rendering our web page
+class ProjectInput {
+	templateElement: HTMLTemplateElement;
+	hostElement: HTMLDivElement;
+	element: HTMLFormElement;
+
+	constructor() {
+		this.templateElement = document.getElementById(
+			'project-input'
+		)! as HTMLTemplateElement;
+		this.hostElement = document.getElementById('app')! as HTMLDivElement;
+
+		// references the code between the template tags
+		const importedNode = document.importNode(
+			this.templateElement.content,
+			true
+		);
+
+		this.element = importedNode.firstElementChild as HTMLFormElement;
+		this.attach();
+	}
+
+	private attach() {
+		this.hostElement.insertAdjacentElement('afterbegin', this.element);
+	}
+}
+
+const prjInput = new ProjectInput();
