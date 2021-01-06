@@ -385,7 +385,11 @@ class Product {
 
 **Webpack server wasn't loading on my work machine (port issue maybe)**
 
-I can just run the webpack build and use live server. Sucks since I have no 'watch' functionality that way
+- Set webpack to live mode
+  ```config
+  watch: true
+  ```
+- Use Live Server
 
 1. [Site Link](https://webpack.js.org/)
 1. With a module based design, there's lots of http requests (loading all the .js files)
