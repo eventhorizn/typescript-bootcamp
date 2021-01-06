@@ -413,9 +413,19 @@ class Product {
 
 1. React is a popular 3rd party library to create User Interfaces
 1. JavaScript is usually the language used w/ React, but you can use TypeScript
+1. [React Docs](https://reactjs.org/docs/getting-started.html)
+1. [Creating TypeScript React](https://create-react-app.dev/docs/adding-typescript/)
 
 - Create new React project w/ typescript
 
   ```cmd
   npx create-react-app . --template typescript
   ```
+
+# NodeJS Express and TypeScript
+
+1. Node doesn't initially care about a file extension, it just runs it as ts
+   ```
+   node app.ts
+   ```
+   - This works as long as the code inside the ts file is vanilla js
