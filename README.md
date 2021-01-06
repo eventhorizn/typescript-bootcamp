@@ -383,6 +383,10 @@ class Product {
 
 # Webpack
 
+**Webpack server wasn't loading on my work machine (port issue maybe)**
+
+I can just run the webpack build and use live server. Sucks since I have no 'watch' functionality that way
+
 1. [Site Link](https://webpack.js.org/)
 1. With a module based design, there's lots of http requests (loading all the .js files)
 1. Webpack is a tool to help bundle our files together
@@ -392,3 +396,11 @@ class Product {
 
 1. Needs a separate `webpack.config.js` file
 1. Remove the .js extensions from import lines
+
+# Third Party Libraries
+
+1. Often you will find lots of useful libraries are only in JS
+1. You often can install the 'types' of a package
+   - Translations to ts of js libraries exist!
+   - [lodash](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lodash)
+1. What if you find a library that **doesn't** have types
