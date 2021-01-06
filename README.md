@@ -369,6 +369,9 @@ class Product {
 
 # TypeScript Modular Code
 
+1. [Modules Overview](https://medium.com/computed-comparisons/commonjs-vs-amd-vs-requirejs-vs-es6-modules-2e814b114a0b)
+1. [More on ES Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
+
 ## Splitting Code into Multiple Files
 
 1. Namespaces & File Bundling
@@ -377,3 +380,15 @@ class Product {
 1. ES6 Imports/Exports
    - ES6 Modules
    - Per-file compilation, but single script import
+
+# Webpack
+
+1. [Site Link](https://webpack.js.org/)
+1. With a module based design, there's lots of http requests (loading all the .js files)
+1. Webpack is a tool to help bundle our files together
+   - Bundling & Build Orchestration
+
+![](images/webpack.png)
+
+1. Needs a separate `webpack.config.js` file
+1. Remove the .js extensions from import lines
