@@ -429,3 +429,5 @@ class Product {
    node app.ts
    ```
    - This works as long as the code inside the ts file is vanilla js
+1. How to test an api?
+   - [Postman](https://www.postman.com/)
