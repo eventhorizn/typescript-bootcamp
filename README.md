@@ -431,3 +431,6 @@ class Product {
    - This works as long as the code inside the ts file is vanilla js
 1. How to test an api?
    - [Postman](https://www.postman.com/)
+1. Alternative is to use 'Nest.js'
+   - [Nest Link](https://nestjs.com/)
+   - Node.js w/ typescript
