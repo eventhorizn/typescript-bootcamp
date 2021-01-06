@@ -408,3 +408,14 @@ class Product {
    - Translations to ts of js libraries exist!
    - [lodash](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lodash)
 1. What if you find a library that **doesn't** have types
+
+# React and TypeScript
+
+1. React is a popular 3rd party library to create User Interfaces
+1. JavaScript is usually the language used w/ React, but you can use TypeScript
+
+- Create new React project w/ typescript
+
+  ```cmd
+  npx create-react-app . --template typescript
+  ```
