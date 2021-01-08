@@ -400,6 +400,11 @@ class Product {
 
 1. Needs a separate `webpack.config.js` file
 1. Remove the .js extensions from import lines
+1. Bundling w/ webpack
+
+```cmd
+npx webpack
+```
 
 # Third Party Libraries
 
